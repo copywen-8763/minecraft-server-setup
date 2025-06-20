@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "開始安裝 RLCraft Server 所需環境..."
+echo "開始安裝 Server 所需環境..."
 
 # 1. 更新系統 & 安裝工具
 echo "更新系統與安裝解壓縮工具與 wget..."
@@ -30,14 +30,7 @@ source myenv/bin/activate
 pip install gdown
 deactivate
 
-# 4. 下載 RLCraft Server（你需確認這 ID 是正確的）
-echo "下載 RLCraft Server..."
-source myenv/bin/activate
-gdown --id 1WvL_luJndX6OkeJcqz8a5wnhaT46IxLg
-unzip server.zip
-deactivate
-
-# 5. 修正與啟用腳本
+# 4. 修正與啟用腳本
 echo "修正啟動腳本格式與給予權限..."
 dos2unix serverfgcp.sh
 chmod +x serverfgcp.sh

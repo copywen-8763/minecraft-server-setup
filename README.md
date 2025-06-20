@@ -1,3 +1,43 @@
+#前處理
+請先至相應版本下載forge server，安裝完畢後開啟forge(版本).jar
+將eula內false改為true，再次開啟forge(版本).jar
+先提前更改需要的config以及材質包等等，並更改server.sh腳本(於github內下載)
+將server.sh放入forge server資料夾，改名為server後壓縮成zip檔案並上傳google drive
+
+#server.sh更改方式
+其中server.sh內容為請自行調整版本
+#!/bin/bash
+cd ~/server
+java -Xms4G -Xmx8G -jar forge-(版本).jar nogui
+
+#藉由gdown下載server檔案
+其中server.zip必須是壓縮的，且檔案狀態必須為公開(任何有連結者都能存取)
+利用共用_>分享連結獲得連結，請自行觀察id，以下為範例連結與其指令
+https://drive.google.com/file/d/1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL/view?usp=drive_link
+gdown --id 1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL
+
+
+#再次注意:server資料夾名稱以及serverfgcp.sh檔案名稱務必與我相同
+以下開始嘗試開啟伺服器
+
+解壓縮server
+unzip server.zip
+
+移動至server
+cd server
+
+保證serverfgcp.sh可以執行(清除編碼問題)
+sudo apt install dos2unix
+dos2unix serverfgcp.sh
+
+給啟動權限
+chmod +x serverfgcp.sh
+
+嘗試執行server
+./serverfgcp
+若成功則設定防火牆
+
+
 #在GCP中設定防火牆
 
 先回到你開啟ssh的位置，找到建立防火牆規則
@@ -57,44 +97,10 @@ http://34.171.194.36:8000/world.zip(以ip 34.171.194.36為例)
 就會自動下載
 
 
-#非rlcraft模組包注意事項
 
-請先至相應版本下載forge server，安裝完畢後開啟forge(版本).jar
 
-將eula內false改為true，再次開啟forge(版本).jar
 
-請先提前更改需要更改的config以及需求的變動，並建立server.sh腳本
 
-其中server.sh內容為
-#!/bin/bash
-cd ~/server
-java -Xms4G -Xmx8G -jar forge-(版本).jar nogui
 
-請將server資料夾刪除
-rm -rf server
 
-用 gdown 下載
-其中server.zip必須是壓縮的，且檔案狀態必須為公開(任何有連結者都能存取)
-利用共用_>分享連結獲得連結，請自行觀察id，以下為範例連結與其指令
-https://drive.google.com/file/d/1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL/view?usp=drive_link
-gdown --id 1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL
-
-解壓縮
-unzip server.zip
-
-注意:server資料夾名稱以及serverfgcp.sh檔案名稱務必與我相同
-
-cd至server
-cd server
-
-保證serverfgcp.sh可以執行
-sudo apt install dos2unix
-dos2unix serverfgcp.sh
-
-給啟動權限
-chmod +x serverfgcp.sh
-
-嘗試執行server
-./serverfgcp
-若成功則設定防火牆
 
