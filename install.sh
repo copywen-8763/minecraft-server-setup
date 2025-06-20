@@ -28,9 +28,15 @@ echo "建立 Python 虛擬環境以方便pip安裝 gdown..."
 python3 -m venv myenv
 source myenv/bin/activate
 pip install gdown
+
+# 下載並解壓 RLCraft server（你需要改這行 id）
+gdown --id 1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL
+unzip server.zip
 deactivate
 
+
 # 4. 修正與啟用腳本
+cd server
 echo "修正啟動腳本格式與給予權限..."
 dos2unix serverfgcp.sh
 chmod +x serverfgcp.sh
