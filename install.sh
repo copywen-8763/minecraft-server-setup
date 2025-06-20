@@ -41,8 +41,11 @@ echo "修正啟動腳本格式與給予權限..."
 dos2unix serverfgcp.sh
 chmod +x serverfgcp.sh
 
+source ~/.bashrc
+java -version
+
 # 結束提示
-echo "安裝完成！你可以用以下方式啟動伺服器："
+echo "安裝完成！請檢查上述java版本是否正確，你可以用以下方式啟動伺服器："
 echo "screen -S Minecraft"
 echo "./serverfgcp.sh"
 echo ""
