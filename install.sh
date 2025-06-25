@@ -28,6 +28,7 @@ pip install gdown
 
 gdown --id 1H0EitvFemdfCcZW9FhjA9hBi0Y3RuErf
 unzip server.zip
+rm -rf World
 deactivate
 
 sudo apt install screen -y
