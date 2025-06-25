@@ -17,6 +17,8 @@ sudo tar -xvzf OpenJDK8U-jdk_x64_linux_hotspot_8u412b08.tar.gz -C /opt/java
 echo "設定 JAVA_HOME..."
 echo "export JAVA_HOME=/opt/java/jdk8u412-b08" >> ~/.bashrc
 echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
+
+cd ~
 source ~/.bashrc
 
 
@@ -37,12 +39,10 @@ dos2unix serverfgcp.sh
 chmod +x serverfgcp.sh
 
 
-source ~/.bashrc
-java -version
-
 echo "安裝完成！請檢查上述java版本是否正確，你可以用以下方式啟動伺服器："
 echo "screen -S Minecraft"
 echo "./serverfgcp.sh"
 echo ""
 echo "請記得在 GCP 開放 TCP 25565 連接埠（請閱README.md）"
+java -version
 
