@@ -26,7 +26,7 @@ source myenv/bin/activate
 pip install gdown
 
 
-gdown --id 1H0EitvFemdfCcZW9FhjA9hBi0Y3RuErf
+gdown --id 1_TrAXHHYYE-Z1UhDbrqKHDzMEQPxWBO8
 unzip server.zip
 deactivate
 
