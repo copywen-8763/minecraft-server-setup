@@ -7,7 +7,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y tar unzip wget zip dos2unix screen python3-venv
 
-cd~
+cd ~
 echo "安裝 Java 8"
 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u412-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u412b08.tar.gz
 sudo mkdir -p /opt/java
