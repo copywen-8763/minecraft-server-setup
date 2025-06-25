@@ -30,6 +30,7 @@ gdown --id 1H0EitvFemdfCcZW9FhjA9hBi0Y3RuErf
 unzip server.zip
 deactivate
 
+sudo apt install screen -y
 
 cd server
 echo "修正啟動腳本格式與給予權限..."

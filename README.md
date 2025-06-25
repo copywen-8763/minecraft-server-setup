@@ -3,7 +3,7 @@
 ## 目錄
 
 - [防火牆設定](#防火牆設定)
-- [使用 screen 背景執行 server.sh](#使用-screen-背景執行-serversh)
+- [開啟伺服器](#使用-screen-背景執行-serversh)
 - [重新連線與管理 screen](#重新連線與管理-screen)
 - [備份與下載 world 檔案](#備份與下載-world-檔案)
 
@@ -26,11 +26,12 @@
 
 ## 使用 screen 背景執行 server.sh
 
+在防火牆設定完成後，輸入以下指令來開啟伺服器
 使用screen開啟server.sh(需要掛假人不然關掉ssh連線會自動關閉)
 若要停用伺服器請直接輸入stop
 
 ```bash
-sudo apt install screen -y
+source ~/.bashrc
 screen -S Minecraft
 ./serverfgcp.sh
 ```
