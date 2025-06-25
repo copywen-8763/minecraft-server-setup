@@ -18,8 +18,6 @@ echo "設定 JAVA_HOME..."
 echo "export JAVA_HOME=/opt/java/jdk8u412-b08" >> ~/.bashrc
 echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
 
-cd ~
-source ~/.bashrc
 
 
 echo "建立 Python 虛擬環境以方便pip安裝 gdown..."
@@ -28,7 +26,7 @@ source myenv/bin/activate
 pip install gdown
 
 
-gdown --id 1vigq2nuHHJeqjwUl2W1km_QKBL5MasAL
+gdown --id 1H0EitvFemdfCcZW9FhjA9hBi0Y3RuErf
 unzip server.zip
 deactivate
 
@@ -44,5 +42,5 @@ echo "screen -S Minecraft"
 echo "./serverfgcp.sh"
 echo ""
 echo "請記得在 GCP 開放 TCP 25565 連接埠（請閱README.md）"
-java -version
+cd ~
 
